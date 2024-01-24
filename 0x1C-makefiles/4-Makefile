@@ -5,7 +5,7 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
-CFLAG = -Wall -Werroe -Wextra -pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic -g -std=c99
 
 all: force $(NAME)
 
@@ -29,3 +29,4 @@ fclean: clean oclean
 re: fclean all
 
 .PHONY: all clean oclean fclean re
+
