@@ -1,0 +1,15 @@
+# Makefile of series of commands including CC, SRC and EXECUTABLE
+#
+
+CC = gcc
+SRC = main.c school.c
+EXECUTABLE = school
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SRC)
+	$(CC) $(SRC) -o $(EXECUTABLE)
+
+.PHONY: clean
+clean:
+	rm -f $(EXECUTABLE)
